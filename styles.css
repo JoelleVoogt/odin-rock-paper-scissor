@@ -18,6 +18,11 @@ h1{
     text-align: center;;
 }
 
+h2{
+    font-size:24px;
+    text-align:center;
+}
+
 p{
     font-size:24px;
     text-align: center;;
@@ -26,7 +31,7 @@ p{
 .battle{
     display:flex;
     flex-direction:column;
-    gap: 48px;
+    gap: 80px;
     padding: 40px;
 }
 
@@ -61,4 +66,23 @@ p{
 #scissors:hover{
     background-color: rgb(0, 6, 180);
     cursor: pointer;
+}
+
+.counter-overview{
+    display:flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.counter{
+    display:flex;
+    flex-direction:row;
+    align-self: center;
+    font-size:24px;
+    gap:24px;
+}
+
+.count{
+    padding: 24px;
+    background-color:#fff;
 }
