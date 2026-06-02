@@ -39,7 +39,7 @@ function playRound(playerChoice){
         updatePlayerScore.innerText = "Player: " + playerScore;
         endGame();
     }else if (playerChoice === computerChoice){
-        showResults.innerText = "It's a draw!";
+        showResults.innerText = "It's a tie!";
         endGame();
     } else{
         computerScore++;
