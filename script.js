@@ -37,15 +37,15 @@ function playRound(playerChoice){
         playerScore++;
         showResults.innerText = `Player wins! ${playerChoice} beats ${computerChoice}`;
         updatePlayerScore.innerText = "Player: " + playerScore;
-        endGame();
+        endGame(playerChoice, computerChoice);
     }else if (playerChoice === computerChoice){
         showResults.innerText = "It's a tie!";
-        endGame();
+        endGame(playerChoice, computerChoice);
     } else{
         computerScore++;
         showResults.innerText = `Computer wins! ${computerChoice} beats ${playerChoice}`;
         updateComputerScore.innerText = "Computer: " + computerScore;
-        endGame();
+        endGame(playerChoice, computerChoice);
     }
 };
 
@@ -55,12 +55,13 @@ function stopButtons(){
     scissorsBtn.removeEventListener("click", handleScissors);
 }
 
-function endGame(){
+function endGame(playerChoice, computerChoice){
+
     if (playerScore === 3){
-        showResults.innerText = "Game over: You win! Well done!";
+        showResults.innerText = `Game over, you win with 3 points! ${playerChoice} beats ${computerChoice}`;
         stopButtons();
     }else if (computerScore === 3){
-        showResults.innerText = "Game over: Computer won! Better luck next time!";
+        showResults.innerText = `Game over, computer wins with 3 points! ${computerChoice} beats ${playerChoice}`;
         stopButtons();
     }
 };
